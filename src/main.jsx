@@ -3,9 +3,11 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import Home from './Home.jsx'
 import Intro from './Pages/Intro.jsx'
+import Discover from './Pages/Discover.jsx'
 
 import { createBrowserRouter } from 'react-router-dom'
 import { RouterProvider } from 'react-router-dom'
+
 
 
 const router = createBrowserRouter([
@@ -19,7 +21,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/discover",
-    element: <p>discover</p>
+    element: <Discover />
   }
 ])
 
