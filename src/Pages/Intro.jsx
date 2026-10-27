@@ -1,4 +1,7 @@
+import { useNavigate } from "react-router-dom"
+
 function Intro() {
+    const navigate = useNavigate()
     return (
         <main className='relative min-h-screen overflow-hidden bg-black'>
             <div className='absolute z-0 -translate-x-[27px] translate-y-[407px] w-[415px] h-[415px] rounded-full bg-[#FF0000] opacity-20 blur-xl'></div>
@@ -10,7 +13,7 @@ function Intro() {
                     </div>
                     <div className="bg-red-600 mt-1 mb-8 h-0.25 w-16"></div>
                     <p className=" text-white text-[20px] font-playfair w-75.5">Como hoje é um dia especial, que tal comemorarmos com uma cantora especial…</p>
-                    <button className=" text-white text-[18px] font-bold mt-8.75 h-13.5 bg-transparent px-5.25 py-3.75 rounded-[50px] border-white border">Descobrir</button>
+                    <button onClick={()=>navigate('/discover')} className=" text-white text-[18px] font-bold mt-8.75 h-13.5 bg-transparent px-5.25 py-3.75 rounded-[50px] border-white border">Descobrir</button>
                 </div>
             </div>
         </main>

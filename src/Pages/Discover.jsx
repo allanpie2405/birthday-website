@@ -30,7 +30,7 @@ const slides = [
 function Discover() {
     return (
         <main className='relative min-h-screen overflow-hidden bg-black'>
-            <Carousel slides={slides} interval={5000} />
+            <Carousel slides={slides} interval={3000} />
             <div className='flex justify-center items-center'>
                 <div className='w-[calc(100%-50px)]'>
                     <p className='mt-7.5  text-white font-playfair '>E como eu sei que você gosta de Lady Gaga, que tal um parabéns da nossa Lady Gaga brasileira</p>
