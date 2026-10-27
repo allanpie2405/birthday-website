@@ -1,14 +1,12 @@
 @import "tailwindcss";
-@font-face {
-  font-family: playfair;
-  src: url(./fonts/Playfair_9pt-Regular.ttf);
-  font-weight: 400;
-  
+@import url('https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap');
+@theme{
+    --font-playfair: "Playfair", serif;
 }
-@font-face{
-  font-family: playfair-light;
-  src: url(./fonts/Playfair_9pt-Light.ttf);
-  font-weight: 300;
+@theme{
+  --color-gray-oblique:#161616
 }
-
+@theme{
+  --color-gray-oblique-light:#525252
+}
 
