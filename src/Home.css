@@ -2,8 +2,13 @@
 @font-face {
   font-family: playfair;
   src: url(./fonts/Playfair_9pt-Regular.ttf);
+  font-weight: 400;
+  
 }
-*{
-    font-family: playfair;
+@font-face{
+  font-family: playfair-light;
+  src: url(./fonts/Playfair_9pt-Light.ttf);
+  font-weight: 300;
 }
+
 
