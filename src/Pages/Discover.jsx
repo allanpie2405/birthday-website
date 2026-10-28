@@ -29,21 +29,21 @@ const slides = [
 
 function Discover() {
     return (
-        <main className='relative min-h-screen overflow-hidden bg-black'>
+        <main className='relative min-h-dvh overflow-hidden bg-black'>
             <Carousel slides={slides} interval={3000} />
             <div className='flex justify-center items-center'>
-                <div className='w-[calc(100%-50px)]'>
-                    <p className='mt-7.5  text-white font-playfair '>E como eu sei que você gosta de Lady Gaga, que tal um parabéns da nossa Lady Gaga brasileira</p>
+                <div className='w-[calc(100%-50px)] md:w-[calc(100%-96px)] max-w-2xl'>
+                    <p className='mt-7.5 md:mt-12 text-white md:text-xl font-playfair'>E como eu sei que você gosta de Lady Gaga, que tal um parabéns da nossa Lady Gaga brasileira</p>
                     <img src={arrowImg} alt="" className='justify-self-center' />
                     <div className='flex flex-col justify-center'>
-                        <p className='mt-7.5 mb-2 text-center text-white font-playfair font-bold '>Beamon</p>
+                        <p className='mt-7.5 mb-2 text-center text-white md:text-xl font-playfair font-bold'>Beamon</p>
                         <video
                             src=""
-                            className="w-[330px] h-[252px] rounded-2xl shadow-[0_0_35px_20px_rgba(239,68,68,0.15)]"
+                            className="mx-auto w-full max-w-[330px] aspect-[330/252] md:max-w-lg lg:max-w-xl rounded-2xl shadow-[0_0_35px_20px_rgba(239,68,68,0.15)]"
                         />
-                        <p className='mt-2 text-white font-playfair text-center font-bold'>@beapozzebon</p>
+                        <p className='mt-2 text-white md:text-lg font-playfair text-center font-bold'>@beapozzebon</p>
                     </div>
-                    <p className='mt-6.75 mb-10 text-white font-playfair'>Parabéns meu amor por mais um ano de vida, passar mais um ano da minha vida com você foi incrível, sou muito grato por ter você na minha vida, eu te desejo muitos anos de vida e felicidade pela frente</p>
+                    <p className='mt-6.75 mb-10 md:mb-16 text-white md:text-xl md:leading-relaxed font-playfair'>Parabéns meu amor por mais um ano de vida, passar mais um ano da minha vida com você foi incrível, sou muito grato por ter você na minha vida, eu te desejo muitos anos de vida e felicidade pela frente</p>
                 </div>
             </div>
         </main>

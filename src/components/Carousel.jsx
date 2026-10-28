@@ -19,7 +19,9 @@ function Carousel({ slides, interval = 5000 }) {
     const currentSlide = slides[currentIndex]
 
     return (
-        <section className="relative min-h-screen w-full overflow-hidden bg-black text-white">
+        // Em telas largas (tablet paisagem / desktop) o carrossel vira uma "coluna" central,
+        // porque as fotos são em retrato (9:16) e ficariam muito cortadas em tela cheia.
+        <section className="relative mx-auto min-h-dvh w-full overflow-hidden bg-black text-white lg:max-w-xl">
 
             {/* Imagem atual */}
             <img
@@ -33,10 +35,10 @@ function Carousel({ slides, interval = 5000 }) {
             <div className="absolute inset-0 bg-gradient-to-b from-black/0 via-black/25 to-black" />
 
             {/* Conteúdo */}
-            <div className="absolute inset-x-0 bottom-0 z-10 px-7 pb-8">
+            <div className="absolute inset-x-0 bottom-0 z-10 px-7 pb-8 md:px-12 md:pb-12 short:pb-5">
 
                 {/* Barras de progresso */}
-                <div className="w-2/6 mb-5 flex gap-2">
+                <div className="w-2/6 md:w-48 mb-5 flex gap-2">
                     {slides.map((slide, index) => (
                         <div
                             key={slide.image}
@@ -49,12 +51,12 @@ function Carousel({ slides, interval = 5000 }) {
                     ))}
                 </div>
 
-                <h2 className="font-playfair text-4xl font-bold leading-tight">
+                <h2 className="font-playfair text-4xl md:text-5xl short:text-3xl font-bold leading-tight">
                     {currentSlide.title}
                     <span className="text-red-500">.</span>
                 </h2>
 
-                <p className="mt-3 text-base leading-snug font-playfair text-neutral-300">
+                <p className="mt-3 text-base md:text-xl leading-snug font-playfair text-neutral-300">
                     {currentSlide.description}
                 </p>
             </div>
