@@ -1,5 +1,6 @@
 
 import { House, Search } from "lucide-react";
+import { Link } from "react-router-dom"
 
 export default function NotFound() {
   return (
@@ -38,8 +39,8 @@ export default function NotFound() {
         </div>
 
         {/* Botão de retorno */}
-        <a
-          href="/"
+        <Link
+          to="/"
           className="group mt-8 inline-flex items-center gap-3 rounded-full bg-red-600 px-7 py-4 md:px-9 md:py-5 md:text-lg font-semibold text-white shadow-[0_0_25px_rgba(220,38,38,0.2)] transition-all duration-300 hover:-translate-y-1 hover:bg-red-500 hover:shadow-[0_0_35px_rgba(220,38,38,0.4)] active:translate-y-0"
         >
           <House
@@ -47,7 +48,7 @@ export default function NotFound() {
             className="transition-transform duration-300 group-hover:-translate-y-0.5"
           />
           Voltar para o início
-        </a>
+        </Link>
 
         {/* Detalhe inferior */}
         <div className="mt-12 flex items-center gap-2 text-xs md:text-sm text-zinc-600">
