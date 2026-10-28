@@ -13,7 +13,7 @@ function Home() {
 
         const user_submit = user
         const password_submit = password
-        if (user_submit.toLowerCase().trim() === userAcess && Number(password_submit) === passwordAcess) {
+        if (user_submit.toLowerCase().trim() === userAcess && password_submit === passwordAcess) {
             setHasError(false)
             navigate('/introduction')
         } else {
