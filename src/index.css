@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-playfair: "Playfair", serif;
+  --color-gray-oblique: #161616;
+  --color-gray-oblique-light: #525252;
+  --color-gray-light: #9F9F9F;
+
+  /*
+   * Breakpoints (mobile-first, valores = largura mínima):
+   *   base  320px+  celulares pequenos (320, 360, 375)
+   *   xs    390px+  celulares atuais (390, 393, 412, 430)
+   *   sm    640px+  celulares em paisagem / tablets pequenos (600-640)
+   *   md    768px+  tablets em retrato (768, 810, 820, 834)
+   *   lg   1024px+  tablets em paisagem / notebooks (1024, 1194)
+   *   xl   1280px+  iPad Pro 12.9" paisagem e desktops (1366)
+   * sm, md, lg e xl já vêm no Tailwind; só o xs é novo.
+   */
+  --breakpoint-xs: 24.375rem;
+
+  /* Tamanho fluido do "Davi." da tela Intro: 128px em 360px de largura */
+  --text-display: clamp(5.5rem, 35vw, 12rem);
+}
+
+/* Telas baixas (celular em paisagem): use o prefixo short: */
+@custom-variant short (@media (max-height: 500px));
