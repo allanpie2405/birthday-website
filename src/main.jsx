@@ -4,9 +4,11 @@ import './index.css'
 import Home from './Home.jsx'
 import Intro from './Pages/Intro.jsx'
 import Discover from './Pages/Discover.jsx'
+import NotFound from './Pages/NotFound.jsx'
 
 import { createBrowserRouter } from 'react-router-dom'
 import { RouterProvider } from 'react-router-dom'
+
 
 
 
@@ -22,6 +24,10 @@ const router = createBrowserRouter([
   {
     path: "/discover",
     element: <Discover />
+  },
+  {
+    path:"*",
+    element:<NotFound />
   }
 ])
 

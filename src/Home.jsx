@@ -5,6 +5,7 @@ import './home.css'
 function Home() {
     const [user, setUser] = useState('')
     const [password, setPassword] = useState('')
+    const [hasError,setHasError] = useState(false)
     const navigate = useNavigate()
 
     function handleLogin() {
@@ -14,9 +15,10 @@ function Home() {
         const user_submit = user
         const password_submit = password
         if (user_submit.toLowerCase().trim() === userAcess && Number(password_submit) === passwordAcess) {
+            setHasError(false)
             navigate('/introduction')
         } else {
-            console.log("não passou na validação")
+            setHasError(true)
         }
 
     }
@@ -44,7 +46,9 @@ function Home() {
                                 value={user}
                                 onChange={(event) => setUser(event.target.value)}
                                 placeholder='Nome do usuário'
-                                className='w-full h-12  p-4 text-gray-light bg-gray-oblique border-gray-oblique-light border rounded-[12px]' />
+                               className={`w-full h-12 p-4 text-gray-light bg-gray-oblique border-gray-oblique-light border rounded-[12px] transition-shadow duration-200 ${
+    hasError ? 'border-red-600 shadow-[0_0_12px_rgba(220,38,38,0.65)]' : ''
+}`} />
                         </div>
 
                         <div className='flex flex-col gap-1.5'>
@@ -55,7 +59,8 @@ function Home() {
                                 value={password}
                                 onChange={(event) => setPassword(event.target.value)}
                                 placeholder='**************'
-                                className='w-full h-12 p-4 text-gray-light bg-gray-oblique border-gray-oblique-light border rounded-[12px]' />
+                                className={`w-full h-12 p-4 text-gray-light bg-gray-oblique border-gray-oblique-light border rounded-[12px] transition-shadow duration-200 ${
+    hasError ? 'border-red-600 shadow-[0_0_12px_rgba(220,38,38,0.65)]' : ''}`} />
                         </div>
                         <button onClick={handleLogin} className=' h-12 font-playfair text-white text-2xl bg-red-600 rounded-[12px]'>Entrar</button>
                     </div>
