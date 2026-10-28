@@ -9,11 +9,11 @@ function Home() {
 
     function handleLogin() {
         const userAcess = "davi"
-        const passwordAcess = 1234
+        const passwordAcess = "18/11/2008"
 
         const user_submit = user
         const password_submit = password
-        if (user_submit.toLowerCase().trim() === userAcess && Number(password_submit) === passwordAcess) {
+        if (user_submit.toLowerCase().trim() === userAcess && password_submit === passwordAcess) {
             setHasError(false)
             navigate('/introduction')
         } else {
@@ -63,7 +63,7 @@ function Home() {
                         </div>
                         <button onClick={handleLogin} className='h-12 md:h-14 font-playfair text-white text-2xl md:text-3xl bg-red-600 rounded-[12px]'>Entrar</button>
                     </div>
-                    <p className='mt-9 md:text-lg font-playfair text-gray-light'>Dica: seu primeiro nome e a data do seu aniversario</p>
+                    <p className='mt-9 md:text-lg font-playfair text-gray-light'>Dica: seu primeiro nome e a data do seu aniversario ex: 00/00/0000</p>
                 </div>
             </div>
         </main>
