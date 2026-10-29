@@ -3,6 +3,7 @@ import img2 from '../assets/lady-gaga-2.jpg'
 import img3 from '../assets/lady-gaga-3.jpg'
 import arrowImg from '../assets/Arrow.png'
 import Carousel from '../components/Carousel'
+import beamon from '../assets/beamon.mp4'
 const slides = [
     {
         image: img1,
@@ -38,10 +39,10 @@ function Discover() {
                     <div className='flex flex-col justify-center'>
                         <p className='mt-7.5 mb-2 text-center text-white md:text-xl font-playfair font-bold'>Beamon</p>
                         <video
-                            src=""
+                            src={beamon}
                             controls
                             playsInline
-                            className="mx-auto w-full max-w-[330px] aspect-[330/252] md:max-w-lg lg:max-w-xl rounded-2xl shadow-[0_0_35px_20px_rgba(239,68,68,0.15)]"
+                            className="mx-auto w-full  md:max-w-lg lg:max-w-xl rounded-2xl shadow-[0_0_35px_20px_rgba(239,68,68,0.15)]"
                         />
                         <p className='mt-2 text-white md:text-lg font-playfair text-center font-bold'>@beapozzebon</p>
                     </div>
